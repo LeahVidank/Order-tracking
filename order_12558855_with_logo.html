@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>מעקב הזמנה - 12558855</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            text-align: center;
+            padding: 40px;
+        }
+        .container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            max-width: 480px;
+            margin: auto;
+            padding: 30px;
+        }
+        .status {
+            font-size: 1.4em;
+            color: #1a73e8;
+            margin-top: 10px;
+        }
+        .label {
+            font-weight: bold;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+        .logo {
+            max-width: 160px;
+            margin-bottom: 20px;
+        }
+        .progressbar {
+            counter-reset: step;
+            margin: 30px 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+        }
+        .progressbar li {
+            position: relative;
+            flex: 1;
+            text-align: center;
+            font-size: 0.85em;
+            color: #bbb;
+        }
+        .progressbar li:before {
+            content: counter(step);
+            counter-increment: step;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            border: 2px solid #bbb;
+            display: block;
+            text-align: center;
+            margin: 0 auto 10px auto;
+            border-radius: 50%;
+            background-color: white;
+        }
+        .progressbar li:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #bbb;
+            top: 11px;
+            left: -50%;
+            z-index: -1;
+        }
+        .progressbar li:first-child:after {
+            content: none;
+        }
+        .progressbar li.active {
+            color: #1a73e8;
+        }
+        .progressbar li.active:before {
+            border-color: #1a73e8;
+            background-color: #1a73e8;
+            color: white;
+        }
+        .progressbar li.active + li:after {
+            background-color: #1a73e8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="לוגו לווצאפ.png" alt="לוגו וידאנק" class="logo">
+        <h2>שלום אורן - סנטנה 👋</h2>
+        <p><span class="label">סטטוס ההזמנה שלך:</span><br><span class="status">📦 בתהליך ייצור</span></p>
+        <p><span class="label">תאריך הזמנה:</span> 15/05/25</p>
+        <p><span class="label">מספר הזמנה:</span> 12558855</p>
+        <ul class="progressbar">
+            <li class="active">הזמנה התקבלה</li><li class="active">בתהליך ייצור</li><li>בדיקת הסחורה</li><li>בשילוח</li><li>הגיע לארץ</li><li>שילוח פנימי</li><li>התקבלה</li>
+        </ul>
+        <img src="WhatsApp Image 2025-04-01 at 15.48.jpg" alt="מוצר">
+    </div>
+</body>
+</html>
